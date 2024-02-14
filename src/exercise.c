@@ -3,7 +3,7 @@
 #include <string.h>
 #include "trainingsplan.h"
 
-Exercise* newExercise(char *name, int numberOfExercises){
+Exercise* newExercise(char *name, int numberOfSets){
     Exercise* newExercise;
 
     newExercise = (Exercise*)malloc(sizeof(Exercise));
@@ -12,7 +12,7 @@ Exercise* newExercise(char *name, int numberOfExercises){
 	}
 	else {
         strcpy(newExercise->name,name);
-        newExercise->numberOfSets = numberOfExercises;
+        newExercise->numberOfSets = numberOfSets;
 		newExercise->pNext = NULL;
 		newExercise->pPrev = NULL;
 	}

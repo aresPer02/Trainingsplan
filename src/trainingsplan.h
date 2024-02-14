@@ -6,8 +6,8 @@ typedef struct exercise
     char name[15];
     unsigned int numberOfSets;
 
-    Exercise *pNext;
-    Exercise *pPrev;
+    struct exercise *pNext;
+    struct exercise *pPrev;
 }Exercise;
 
 typedef struct plan
@@ -16,8 +16,9 @@ typedef struct plan
     unsigned int numberOfExercises;
 
     Exercise exercises[];
-};
+}Plan;
 
 Exercise* newExercise(char *name, int numberOfExercises);
+void printExercise(Exercise *theExercise);
 
 #endif
