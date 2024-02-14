@@ -18,6 +18,6 @@ typedef struct plan
     Exercise exercises[];
 };
 
-Exercise* newExercise(void);
+Exercise* newExercise(char *name, int numberOfExercises);
 
 #endif
