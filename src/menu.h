@@ -5,7 +5,7 @@ typedef struct menuContent
 {
     char menuFunctionName[20];
 
-    void (*pFunction)(void);
+    void (*pFunction)();
 }MenuContent;
 
 typedef struct menu
@@ -16,5 +16,7 @@ typedef struct menu
 
 	MenuContent menuList[20];
 }Menu;
+
+void printMenu(Menu* pMenu);
 
 #endif
